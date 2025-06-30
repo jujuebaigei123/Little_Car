@@ -39,7 +39,7 @@ rospy.Subscriber('/local_path_plan/remainpath', Float64, remainpath_callback)
 rospy.Subscriber('/local_path_plan/passedpath', Float64, passedpath_callback)
 Car_ID=rospy.get_param('/Car_ID',"Car000")
 
-# MQTT连接参数
+# MQTT连接参数12
 mqtt_broker = rospy.get_param('/broker',"192.168.2.115")
 mqtt_port = 1883
 mqtt_topic = "wsk/test/"+Car_ID
