@@ -10,6 +10,9 @@ from gps.msg import MyGPS_msg
 from std_msgs.msg import Float64
 import math
 actor = None
+
+
+
 actor=rospy.get_param('/simple_pub/actor',None)
 print(actor)
 msg_dict={"vel": 0, 
