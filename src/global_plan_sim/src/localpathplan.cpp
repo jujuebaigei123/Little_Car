@@ -25,7 +25,7 @@ private:
     ros::Publisher taskpath_pub, globalpath_pub, localpath_pub, shotpose_pub, pathmarkers_pub, remainpath_pub, passedpath_pub;
     ros::Subscriber task_sub, rviz_goal_sub, carstate_sub;
     nav_msgs::Path task_path;   //  稀疏任务点
-    nav_msgs::Path global_path; //  加密后的全局点(带速度规划,速度为正), 最后一段最密
+    nav_msgs::Path global_path; //  加密后的全局点(带速度规划,速度为正), 最后一段最密   duiduidui122
     nav_msgs::Path local_path;  //  从global_path中抽取的局部路径
     geometry_msgs::PoseStamped shotpose;
     double utm_x_zero = 0, utm_y_zero = 0;
