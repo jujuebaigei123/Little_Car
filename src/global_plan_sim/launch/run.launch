@@ -1,0 +1,32 @@
+<launch>
+    <include file="$(find gps)/launch/run.launch"/>
+    <!-- <include file="$(find unitree_sdk2)/launch/run.launch"/> -->
+
+    <include file="$(find mqtt_commx)/launch/test.launch"/>
+    
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="velodyne_rslidar" args="0 0 0 0 0 0 velodyne rslidar"/> -->
+    <!-- <node pkg="data_comm" name="can_comm" type="can_comm"/> -->
+
+    <node pkg="global_plan_sim" type="local_path_plan" name="local_path_plan" output="screen">
+    </node>
+    <node pkg="pathtrack" type="pathtrack" name="pathtrack" output="screen">
+        <!-- <param name="run_enable" value="false"/> -->
+        <param name="angle_offset" value="5"/>
+        <param name="sync" value="false"/>
+    </node>
+
+    <!-- <node pkg="pathtrack" type="speedlimit" name="speedlimit" output="screen">
+        <param name="obstacle_enable" value="true"/>
+    </node> -->
+
+    <node pkg="pathtrack" type="selfturnctr" name="selfturnctr" output="screen"/>
+
+    <node pkg="rviz" type="rviz" name="rviz_global_plan_sim" args="-d $(find global_plan_sim)/test.rviz" output="screen" respawn="true">
+        <param name= "init_path" value="my"/>
+        <param name = "arrive_flag" value = "false"/>
+    </node>
+
+    <include file="$(find car_ctr)/launch/run.launch"/>
+    
+    <!-- <node pkg="rqt_gui" type="rqt_gui" name="rqt_gui"/> -->
+</launch> 

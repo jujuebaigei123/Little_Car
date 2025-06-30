@@ -1,0 +1,13 @@
+1001	slam fault
+1002	rslidar fault
+1003	ccd fault
+1004    car_ctr fault
+1005    station fault
+1006    battery fault
+1007    turntable fault
+2001    if_cam fault
+4001    motor err
+4002    motor enable err
+4003    temperature high
+4004    battery low    
+

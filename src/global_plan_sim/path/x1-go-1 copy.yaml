@@ -1,0 +1,16 @@
+accordingPathdir: true
+onlyAkm: true
+# next_path: x1-go-2
+
+pose0:
+  map_x: 11.16
+  map_y: -9
+  heading: 0
+  vel: 1.5
+  caption: ""
+pose1:
+  map_x: 11.16
+  map_y: 2
+  heading: 0
+  vel: 1.5
+  caption: ""

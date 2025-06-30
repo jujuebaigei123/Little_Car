@@ -1,0 +1,8 @@
+prefix=/home/cqy/projects/Little_Car_ws/install
+
+Name: car_ctr
+Description: Description of car_ctr
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

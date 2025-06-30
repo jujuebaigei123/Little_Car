@@ -1,0 +1,14 @@
+<launch>
+   <node pkg="mqtt_comm" type="iot_comm" name="iot_comm" respawn="true" output="screen">
+      <param name="iot_enable" value="true"/>
+   </node>
+
+   <node pkg="mqtt_comm" type="agv_ros_sync.py" name="agv_ros_sync" respawn="true" output="screen"/>
+
+   <node pkg="mqtt_comm" type="bit_test.py" name="bit_test" respawn="true" output="screen"/>
+
+   <node pkg="mqtt_comm" type="all_agv_check" name="all_agv_check" respawn="true" output="screen">
+      <param name="enable" value="true"/>
+   </node>
+
+</launch>

@@ -1,0 +1,369 @@
+accordingPathdir: true
+onlyAkm: true
+
+pose0:
+  map_x: -1.0
+  map_y: 12.7
+  heading: 1.5708
+  vel: 1.2338
+  caption: ""
+pose1:
+  map_x: -1.0
+  map_y: 12.716899999999999
+  heading: 1.5708
+  vel: 1.2572999999999999
+  caption: ""
+pose2:
+  map_x: -1.0
+  map_y: 12.7456
+  heading: 1.5708
+  vel: 1.2721
+  caption: ""
+pose3:
+  map_x: -1.0
+  map_y: 12.781600000000001
+  heading: 1.5708
+  vel: 1.2805
+  caption: ""
+pose4:
+  map_x: -1.0
+  map_y: 12.8218
+  heading: 1.5708
+  vel: 1.2858
+  caption: ""
+pose5:
+  map_x: -1.0
+  map_y: 12.8647
+  heading: 1.5708
+  vel: 1.292
+  caption: ""
+pose6:
+  map_x: -1.0
+  map_y: 12.9107
+  heading: 1.5708
+  vel: 1.3036999999999999
+  caption: ""
+pose7:
+  map_x: -1.0
+  map_y: 12.9626
+  heading: 1.5708
+  vel: 1.3236999999999999
+  caption: ""
+pose8:
+  map_x: -1.0
+  map_y: 13.0244
+  heading: 1.5708
+  vel: 1.3533
+  caption: ""
+pose9:
+  map_x: -1.0
+  map_y: 13.1011
+  heading: 1.5708
+  vel: 1.3918
+  caption: ""
+pose10:
+  map_x: -1.0
+  map_y: 13.197
+  heading: 1.5708
+  vel: 1.4357
+  caption: ""
+pose11:
+  map_x: -1.0
+  map_y: 13.3148
+  heading: 1.5708
+  vel: 1.4784
+  caption: ""
+pose12:
+  map_x: -1.0
+  map_y: 13.454
+  heading: 1.5708
+  vel: 1.5163
+  caption: ""
+pose13:
+  map_x: -1.0
+  map_y: 13.6122
+  heading: 1.5708
+  vel: 1.5473
+  caption: ""
+pose14:
+  map_x: -1.0
+  map_y: 13.7858
+  heading: 1.5708
+  vel: 1.5712
+  caption: ""
+pose15:
+  map_x: -1.0
+  map_y: 13.971499999999999
+  heading: 1.5708
+  vel: 1.5885
+  caption: ""
+pose16:
+  map_x: -1.0
+  map_y: 14.165700000000001
+  heading: 1.5708
+  vel: 1.6
+  caption: ""
+pose17:
+  map_x: -1.0
+  map_y: 14.3657
+  heading: 1.5708
+  vel: 1.6069
+  caption: ""
+pose18:
+  map_x: -1.0
+  map_y: 14.5691
+  heading: 1.5708
+  vel: 1.6103
+  caption: ""
+pose19:
+  map_x: -1.0
+  map_y: 14.7742
+  heading: 1.5708
+  vel: 1.6113
+  caption: ""
+pose20:
+  map_x: -1.0
+  map_y: 14.9799
+  heading: 1.5708
+  vel: 1.6108
+  caption: ""
+pose21:
+  map_x: -1.0
+  map_y: 15.1853
+  heading: 1.5708
+  vel: 1.6094
+  caption: ""
+pose22:
+  map_x: -1.0
+  map_y: 15.39
+  heading: 1.5708
+  vel: 1.6076
+  caption: ""
+pose23:
+  map_x: -1.0
+  map_y: 15.5938
+  heading: 1.5708
+  vel: 1.6057
+  caption: ""
+pose24:
+  map_x: -1.0
+  map_y: 15.7966
+  heading: 1.5708
+  vel: 1.6038999999999999
+  caption: ""
+pose25:
+  map_x: -1.0
+  map_y: 15.9986
+  heading: 1.5708
+  vel: 1.6023999999999998
+  caption: ""
+pose26:
+  map_x: -1.0
+  map_y: 16.1998
+  heading: 1.5708
+  vel: 1.6012
+  caption: ""
+pose27:
+  map_x: -1.0
+  map_y: 16.4004
+  heading: 1.5708
+  vel: 1.6002999999999998
+  caption: ""
+pose28:
+  map_x: -1.0
+  map_y: 16.6006
+  heading: 1.5708
+  vel: 1.5997
+  caption: ""
+pose29:
+  map_x: -1.0
+  map_y: 16.8005
+  heading: 1.5708
+  vel: 1.5994
+  caption: ""
+pose30:
+  map_x: -1.0
+  map_y: 17.0002
+  heading: 1.5708
+  vel: 1.5993
+  caption: ""
+pose31:
+  map_x: -1.0
+  map_y: 17.1998
+  heading: 1.5708
+  vel: 1.5994
+  caption: ""
+pose32:
+  map_x: -1.0
+  map_y: 17.3996
+  heading: 1.5708
+  vel: 1.5997999999999999
+  caption: ""
+pose33:
+  map_x: -1.0
+  map_y: 17.5995
+  heading: 1.5708
+  vel: 1.6005
+  caption: ""
+pose34:
+  map_x: -1.0
+  map_y: 17.7997
+  heading: 1.5708
+  vel: 1.6014
+  caption: ""
+pose35:
+  map_x: -1.0
+  map_y: 18.0004
+  heading: 1.5708
+  vel: 1.6026
+  caption: ""
+pose36:
+  map_x: -1.0
+  map_y: 18.2018
+  heading: 1.5708
+  vel: 1.6040999999999999
+  caption: ""
+pose37:
+  map_x: -1.0
+  map_y: 18.4038
+  heading: 1.5708
+  vel: 1.6058999999999999
+  caption: ""
+pose38:
+  map_x: -1.0
+  map_y: 18.6068
+  heading: 1.5708
+  vel: 1.6077
+  caption: ""
+pose39:
+  map_x: -1.0
+  map_y: 18.8106
+  heading: 1.5708
+  vel: 1.6093
+  caption: ""
+pose40:
+  map_x: -1.0
+  map_y: 19.0152
+  heading: 1.5708
+  vel: 1.6105
+  caption: ""
+pose41:
+  map_x: -1.0
+  map_y: 19.2205
+  heading: 1.5708
+  vel: 1.6106
+  caption: ""
+pose42:
+  map_x: -1.0
+  map_y: 19.4258
+  heading: 1.5708
+  vel: 1.6091
+  caption: ""
+pose43:
+  map_x: -1.0
+  map_y: 19.6303
+  heading: 1.5708
+  vel: 1.605
+  caption: ""
+pose44:
+  map_x: -1.0
+  map_y: 19.8329
+  heading: 1.5708
+  vel: 1.5974
+  caption: ""
+pose45:
+  map_x: -1.0
+  map_y: 20.0316
+  heading: 1.5708
+  vel: 1.5852
+  caption: ""
+pose46:
+  map_x: -1.0
+  map_y: 20.2242
+  heading: 1.5708
+  vel: 1.5672
+  caption: ""
+pose47:
+  map_x: -1.0
+  map_y: 20.4078
+  heading: 1.5708
+  vel: 1.5427
+  caption: ""
+pose48:
+  map_x: -1.0
+  map_y: 20.5791
+  heading: 1.5708
+  vel: 1.5114999999999998
+  caption: ""
+pose49:
+  map_x: -1.0
+  map_y: 20.7349
+  heading: 1.5708
+  vel: 1.4742
+  caption: ""
+pose50:
+  map_x: -1.0
+  map_y: 20.8719
+  heading: 1.5708
+  vel: 1.4329
+  caption: ""
+pose51:
+  map_x: -1.0
+  map_y: 20.9884
+  heading: 1.5708
+  vel: 1.3921
+  caption: ""
+pose52:
+  map_x: -1.0
+  map_y: 21.0844
+  heading: 1.5708
+  vel: 1.3539999999999999
+  caption: ""
+pose53:
+  map_x: -1.0
+  map_y: 21.1614
+  heading: 1.5708
+  vel: 1.3197999999999999
+  caption: ""
+pose54:
+  map_x: -1.0
+  map_y: 21.2213
+  heading: 1.5708
+  vel: 1.2902
+  caption: ""
+pose55:
+  map_x: -1.0
+  map_y: 21.2665
+  heading: 1.5708
+  vel: 1.2658
+  caption: ""
+pose56:
+  map_x: -1.0
+  map_y: 21.2994
+  heading: 1.5708
+  vel: 1.2477
+  caption: ""
+pose57:
+  map_x: -1.0
+  map_y: 21.3232
+  heading: 1.5708
+  vel: 1.2358
+  caption: ""
+pose58:
+  map_x: -1.0
+  map_y: 21.3411
+  heading: 1.5708
+  vel: 0.8295
+  caption: ""
+pose59:
+  map_x: -1.0
+  map_y: 21.355800000000002
+  heading: 1.5708
+  vel: 0.6273
+  caption: ""
+pose60:
+  map_x: -1.0
+  map_y: 21.369500000000002
+  heading: 1.5708
+  vel: 0.0
+  caption: ""

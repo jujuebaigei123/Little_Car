@@ -1,0 +1,22 @@
+/agv_cmd
+{
+"id": "agv001",
+"cmd": "pick task",   #  four type: pick release move charge + task  
+"subcmd": "0",
+"final_path": true,
+"path": [{"vehSpeed": 1, "pointX": 10, "pointY": 10, "pointHA": 12, "lane_type":24},
+         {"vehSpeed": 1, "pointX": 10, "pointY": 20, "pointHA": 12, "lane_type":24}
+        ]
+}
+
+/system_cmd
+{
+    "id": "",     # to all agvs 
+    "data": 999  
+}
+
+/system_cmd
+{
+    "id": "agv001",    
+    "data": 999  
+}

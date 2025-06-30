@@ -1,0 +1,32 @@
+cmd_Header header
+Point point
+fault_info[]  faults
+
+int64 act_type
+int64 chassis_total_hour
+float64 distance_to_target
+int64 drv_direction
+bool empty
+bool estop
+int64 firm_error_status
+int64 frame_ts
+int64 gear
+bool in_high_voltage    # 取车状态
+bool is_charging
+int64 mileage
+int64 motion_mode
+string navi_id
+int64 operational_status
+int64 platform_state
+int64 soc
+int64 soh
+float64 speed
+int64 state_flow
+string sub_target
+string target
+string task_id
+int64 task_mode
+int64 task_type
+int64 turn_light
+int64 vehicle_error_status
+string vin

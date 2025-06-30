@@ -1,0 +1,38 @@
+accordingPathdir: true
+onlyAkm: true
+pose0:
+  map_x: 11.36
+  map_y: -12.11
+  heading: 0
+  vel: 1.0
+  caption: ""
+pose1:
+  map_x: 11.36
+  map_y: -2.11
+  heading: 0
+  vel: 1.0
+  caption: ""
+pose2:
+  map_x: 9.297122469204961
+  map_y: -3.160234323300699
+  heading: 87.62640445803778
+  vel: 0.3
+  caption: ""
+pose3:
+  map_x: 9.297232857797345
+  map_y: -3.159859693118773
+  heading: 87.64159722726359
+  vel: 0.3
+  caption: ""
+pose4:
+  map_x: 9.242798575480016
+  map_y: -4.161038306798176
+  heading: 89.51199808618523
+  vel: 0.3
+  caption: ""
+pose5:
+  map_x: 9.095803556649646
+  map_y: -5.233387852412753
+  heading: 72.89549930230798
+  vel: 0.3
+  caption: ""

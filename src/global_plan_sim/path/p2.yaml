@@ -1,0 +1,28 @@
+accordingPathdir: true
+onlyAkm: true
+# next_path: p2
+
+# pose0:
+#   map_x: 8.72
+#   map_y: -10.63
+#   heading: 0
+#   vel: 1.2
+#   caption: ""
+# pose1:
+#   map_x: 2.72
+#   map_y: -10.63
+#   heading: 0
+#   vel: 1.2
+#   caption: ""
+
+
+pose0:
+  map_x: 6.36
+  map_y: -13.86
+  heading: 0
+  circle: [6, 0, 90, 20, 1]
+  vel: 1.4
+  caption: ""
+
+
+  

@@ -1,0 +1,25 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/wsk/ROS_Programing/烟台港样车_ws/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/wsk/ROS_Programing/烟台港样车_ws/src/sensor/c200_lidar/include/**",
+        "/home/wsk/ROS_Programing/烟台港样车_ws/src/share/common/include/**",
+        "/home/wsk/ROS_Programing/烟台港样车_ws/src/sensor/gps/include/**",
+        "/home/wsk/ROS_Programing/烟台港样车_ws/src/control/pawcontrol/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

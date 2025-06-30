@@ -1,0 +1,13 @@
+accordingPathdir: false
+onlyAkm: true
+next_path: x1-go-5
+
+pose0:
+  map_x: 14.96
+  map_y: 2
+  heading: 0
+  circle: [5.6, 90, 180, 20, -1]
+  vel: 1.2
+  caption: ""
+
+  

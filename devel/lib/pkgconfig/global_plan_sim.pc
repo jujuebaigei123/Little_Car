@@ -1,0 +1,8 @@
+prefix=/home/cqy/projects/Little_Car_ws/devel
+
+Name: global_plan_sim
+Description: Description of global_plan_sim
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs message_runtime common

@@ -1,0 +1,34 @@
+ <launch>
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="base_side" args="0 -1.375 0 0 0 0 base_link_side base_link"/> -->
+    <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="base_side" args="0.30 -0.15 0 0 0 0 base_link_gps base_link"/> -->
+
+    <node pkg="keyboard" type="keyboard" name="keyboard" output="screen"/> 
+    <!-- <include file="$(find teleop_twist_joy)/launch/teleop.launch"/> -->
+
+    <node pkg="gps" type="gps_base" name="gps_base" respawn="false" output="screen">
+        <param name="sim_flag" value="false"/>
+        <param name="setMapZeroFlag" value="false"/>
+        <param name="utmx_zero" value="440562.41"/>
+        <param name="utmy_zero" value="4423934.57"/>
+
+        <!--串口和以太网只能选择一个(串口)-->
+        <param name="mode" value="SER"/>
+        <param name="devname" value="/dev/ttyS0"/>
+        <param name="baud" value="115200"/>
+
+        <!--串口和以太网只能选择一个(以太网)1234-->
+        <!-- <param name="mode" value="UDP"/>
+        <param name="IP" value="192.168.2.2"/>
+        <param name="port" value="1234"/>  -->
+        <!-- <param name="mode" value="UDP"/>
+        <param name="IP" value="192.168.5.2"/>
+        <param name="port" value="1234"/> -->
+    </node>
+
+    <node pkg="gps" type="gps_pro" name="gps_pro" output="screen" respawn="true">
+        <param name="saveflag" value="false"/>
+    </node>
+
+    <!-- <node pkg="rqt_gui" name="rqt_gui" type="rqt_gui" output="screen"/> -->
+    <!-- <node pkg="rviz" name="rviz" type="rviz" args="-d $(find gps)/show.rviz"/> -->
+ </launch>

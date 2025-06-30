@@ -1,0 +1,8 @@
+prefix=/home/cqy/projects/Little_Car_ws/devel
+
+Name: mqtt_commx
+Description: Description of mqtt_commx
+Version: 0.0.0
+Cflags: -I/home/cqy/projects/Little_Car_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: roscpp std_msgs message_runtime common

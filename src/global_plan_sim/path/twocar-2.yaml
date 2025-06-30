@@ -1,0 +1,371 @@
+accordingPathdir: true
+onlyAkm: true
+
+pose0:
+  map_x: -1.0
+  map_y: 21.3
+  heading: -1.5708
+  vel: 1.0426
+  caption: ""
+pose1:
+  map_x: -1.0
+  map_y: 21.2787
+  heading: -1.5287
+  vel: 1.0943
+  caption: ""
+pose2:
+  map_x: -0.998
+  map_y: 21.2316
+  heading: -1.4581
+  vel: 1.154
+  caption: ""
+pose3:
+  map_x: -0.9894
+  map_y: 21.1551
+  heading: -1.3721
+  vel: 1.2195
+  caption: ""
+pose4:
+  map_x: -0.9677
+  map_y: 21.0475
+  heading: -1.2824
+  vel: 1.2869
+  caption: ""
+pose5:
+  map_x: -0.9269000000000001
+  map_y: 20.91
+  heading: -1.1994
+  vel: 1.3504
+  caption: ""
+pose6:
+  map_x: -0.8633
+  map_y: 20.7467
+  heading: -1.1312
+  vel: 1.4015
+  caption: ""
+pose7:
+  map_x: -0.7779
+  map_y: 20.5651
+  heading: -1.0836
+  vel: 1.4353
+  caption: ""
+pose8:
+  map_x: -0.6759999999999999
+  map_y: 20.372799999999998
+  heading: -1.0592
+  vel: 1.4512
+  caption: ""
+pose9:
+  map_x: -0.5655
+  map_y: 20.176000000000002
+  heading: -1.0583
+  vel: 1.4515
+  caption: ""
+pose10:
+  map_x: -0.4548
+  map_y: 19.9793
+  heading: -1.0788
+  vel: 1.4416
+  caption: ""
+pose11:
+  map_x: -0.35050000000000003
+  map_y: 19.7847
+  heading: -1.1169
+  vel: 1.4285
+  caption: ""
+pose12:
+  map_x: -0.25660000000000005
+  map_y: 19.5921
+  heading: -1.1681
+  vel: 1.4176
+  caption: ""
+pose13:
+  map_x: -0.17469999999999997
+  map_y: 19.4
+  heading: -1.2276
+  vel: 1.4122
+  caption: ""
+pose14:
+  map_x: -0.10540000000000005
+  map_y: 19.206
+  heading: -1.2906
+  vel: 1.4079
+  caption: ""
+pose15:
+  map_x: -0.049000000000000044
+  map_y: 19.009900000000002
+  heading: -1.3532
+  vel: 1.4054
+  caption: ""
+pose16:
+  map_x: -0.005199999999999982
+  map_y: 18.812
+  heading: -1.4119
+  vel: 1.4043
+  caption: ""
+pose17:
+  map_x: 0.026799999999999935
+  map_y: 18.6124
+  heading: -1.4644
+  vel: 1.4041000000000001
+  caption: ""
+pose18:
+  map_x: 0.04820000000000002
+  map_y: 18.4115
+  heading: -1.5088
+  vel: 1.4042
+  caption: ""
+pose19:
+  map_x: 0.060799999999999965
+  map_y: 18.2098
+  heading: -1.5443
+  vel: 1.4043
+  caption: ""
+pose20:
+  map_x: 0.06610000000000005
+  map_y: 18.0077
+  heading: -1.5706
+  vel: 1.4042
+  caption: ""
+pose21:
+  map_x: 0.06610000000000005
+  map_y: 17.8056
+  heading: -1.5883
+  vel: 1.4037
+  caption: ""
+pose22:
+  map_x: 0.06259999999999999
+  map_y: 17.6038
+  heading: -1.5981
+  vel: 1.4029
+  caption: ""
+pose23:
+  map_x: 0.05709999999999993
+  map_y: 17.4024
+  heading: -1.6012
+  vel: 1.4020000000000001
+  caption: ""
+pose24:
+  map_x: 0.050999999999999934
+  map_y: 17.2015
+  heading: -1.5994
+  vel: 1.4011
+  caption: ""
+pose25:
+  map_x: 0.045299999999999896
+  map_y: 17.001
+  heading: -1.5941
+  vel: 1.4003
+  caption: ""
+pose26:
+  map_x: 0.04059999999999997
+  map_y: 16.8009
+  heading: -1.5871
+  vel: 1.3996
+  caption: ""
+pose27:
+  map_x: 0.0374000000000001
+  map_y: 16.6012
+  heading: -1.5804
+  vel: 1.3991
+  caption: ""
+pose28:
+  map_x: 0.03550000000000009
+  map_y: 16.401699999999998
+  heading: -1.5755
+  vel: 1.3988
+  caption: ""
+pose29:
+  map_x: 0.034499999999999975
+  map_y: 16.2023
+  heading: -1.5741
+  vel: 1.3988
+  caption: ""
+pose30:
+  map_x: 0.03390000000000004
+  map_y: 16.0028
+  heading: -1.5776
+  vel: 1.3993
+  caption: ""
+pose31:
+  map_x: 0.03249999999999997
+  map_y: 15.8032
+  heading: -1.5871
+  vel: 1.4002
+  caption: ""
+pose32:
+  map_x: 0.029199999999999893
+  map_y: 15.6032
+  heading: -1.6037
+  vel: 1.4017
+  caption: ""
+pose33:
+  map_x: 0.022599999999999953
+  map_y: 15.4024
+  heading: -1.6277
+  vel: 1.4042
+  caption: ""
+pose34:
+  map_x: 0.011200000000000099
+  map_y: 15.2006
+  heading: -1.6594
+  vel: 1.408
+  caption: ""
+pose35:
+  map_x: -0.006900000000000017
+  map_y: 14.997399999999999
+  heading: -1.6985
+  vel: 1.4123999999999999
+  caption: ""
+pose36:
+  map_x: -0.03320000000000001
+  map_y: 14.7929
+  heading: -1.7442
+  vel: 1.4179
+  caption: ""
+pose37:
+  map_x: -0.06920000000000004
+  map_y: 14.5871
+  heading: -1.7953
+  vel: 1.4243000000000001
+  caption: ""
+pose38:
+  map_x: -0.11639999999999995
+  map_y: 14.3803
+  heading: -1.8502
+  vel: 1.431
+  caption: ""
+pose39:
+  map_x: -0.17589999999999995
+  map_y: 14.1731
+  heading: -1.9071
+  vel: 1.4369
+  caption: ""
+pose40:
+  map_x: -0.248
+  map_y: 13.966899999999999
+  heading: -1.9638
+  vel: 1.439
+  caption: ""
+pose41:
+  map_x: -0.33199999999999996
+  map_y: 13.7642
+  heading: -2.0186
+  vel: 1.4331
+  caption: ""
+pose42:
+  map_x: -0.42579999999999996
+  map_y: 13.568999999999999
+  heading: -2.0702
+  vel: 1.4156
+  caption: ""
+pose43:
+  map_x: -0.5253
+  map_y: 13.3866
+  heading: -2.1182
+  vel: 1.3846
+  caption: ""
+pose44:
+  map_x: -0.6254
+  map_y: 13.2223
+  heading: -2.1626
+  vel: 1.3404
+  caption: ""
+pose45:
+  map_x: -0.7202999999999999
+  map_y: 13.0811
+  heading: -2.204
+  vel: 1.2863
+  caption: ""
+pose46:
+  map_x: -0.8049999999999999
+  map_y: 12.9657
+  heading: -2.2433
+  vel: 1.23
+  caption: ""
+pose47:
+  map_x: -0.8767
+  map_y: 12.8757
+  heading: -2.2812
+  vel: 1.1761
+  caption: ""
+pose48:
+  map_x: -0.9341
+  map_y: 12.809000000000001
+  heading: -2.3184
+  vel: 1.1275
+  caption: ""
+pose49:
+  map_x: -0.9774
+  map_y: 12.7623
+  heading: -2.3552
+  vel: 1.0857
+  caption: ""
+pose50:
+  map_x: -1.0077
+  map_y: 12.7319
+  heading: -2.3918
+  vel: 1.0517
+  caption: ""
+pose51:
+  map_x: -1.0266
+  map_y: 12.7143
+  heading: -2.4284
+  vel: 1.0265
+  caption: ""
+pose52:
+  map_x: -1.0366
+  map_y: 12.7057
+  heading: -2.465
+  vel: 1.01
+  caption: ""
+pose53:
+  map_x: -1.0405
+  map_y: 12.7026
+  heading: -2.5015
+  vel: 1.0016
+  caption: ""
+pose54:
+  map_x: -1.0411
+  map_y: 12.7021
+  heading: -2.5381
+  vel: 1.0
+  caption: ""
+pose55:
+  map_x: -1.0412
+  map_y: 12.7021
+  heading: -2.5747
+  vel: 1.0001
+  caption: ""
+pose56:
+  map_x: -1.0412
+  map_y: 12.702
+  heading: -2.6112
+  vel: 1.0001
+  caption: ""
+pose57:
+  map_x: -1.0412
+  map_y: 12.702
+  heading: -2.6478
+  vel: 1.0001
+  caption: ""
+pose58:
+  map_x: -1.0412
+  map_y: 12.702
+  heading: -2.6844
+  vel: 0.8002
+  caption: ""
+pose59:
+  map_x: -1.0413000000000001
+  map_y: 12.702
+  heading: -2.7209
+  vel: 0.6005
+  caption: ""
+pose60:
+  map_x: -1.0415
+  map_y: 12.7019
+  heading: -2.7575
+  vel: 0.0
+  caption: ""
+
+

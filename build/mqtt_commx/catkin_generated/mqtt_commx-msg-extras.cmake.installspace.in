@@ -1,0 +1,2 @@
+set(mqtt_commx_MESSAGE_FILES "msg/cmd_Header.msg;msg/path_point.msg;msg/iot_path_point.msg;msg/controls.msg;msg/task.msg;msg/cmd_resp.msg;msg/iot_controls.msg;msg/iot_taskpath.msg;msg/iot_tasks.msg;msg/fault_info.msg;msg/fault_info_array.msg;msg/resp_iot.msg;msg/charge_station_notify.msg;msg/network_heartbeat.msg;msg/Point.msg;msg/act_status.msg;msg/iot_act_status.msg")
+set(mqtt_commx_SERVICE_FILES "")

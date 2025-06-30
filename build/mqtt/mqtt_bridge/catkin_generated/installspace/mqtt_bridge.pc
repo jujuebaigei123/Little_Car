@@ -1,0 +1,8 @@
+prefix=/home/cqy/projects/Little_Car_ws/install
+
+Name: mqtt_bridge
+Description: Description of mqtt_bridge
+Version: 0.2.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
