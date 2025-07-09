@@ -231,7 +231,8 @@ void TPathTrack::LocalPathCallback(const nav_msgs::Path::ConstPtr &msg) // 接�
         aimpoint.point = p.pose.position;
     }
 
-    ref_speed = localpath.poses[0].pose.position.z; //  速度为首点Z数据
+    // ref_speed = localpath.poses[0].pose.position.z; //  速度为首点Z数据
+    ref_speed = 0.5;
     ref_speed = min(ref_speed, speedlimit);
 
     // printf("vel0=%.2f\n", localpath.poses[0].pose.positio    
@@ -358,7 +359,8 @@ void TPathTrack::Run() //  主运行函数
     nodecheck->Find("node_rate")->Beat();
     if(CheckTrackErr()<0.5)  nodecheck->Find("track_rate")->Beat();
     
-    move_dir=CheckMoveDir(localpath, 0);
+    // move_dir=CheckMoveDir(localpath, 0);
+    move_dir = "front";
     std_msgs::String str_msg;
     str_msg.data=move_dir;
     movedir_pub.publish(str_msg);
