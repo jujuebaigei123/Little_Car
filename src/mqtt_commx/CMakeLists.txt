@@ -12,6 +12,7 @@ project(mqtt_commx)
 find_package(catkin REQUIRED COMPONENTS
   roscpp
   std_msgs
+  nav_msgs
   message_generation
   tf
   rospy

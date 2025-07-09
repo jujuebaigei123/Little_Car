@@ -1,2 +1,2 @@
-control/car_ctr:control/keyboard:control/pathtrack:global_plan_sim:mqtt/mqtt_bridge:mqtt/mqtt_comm:mqtt_commx:sensor/gps:share/common
+control/car_ctr:control/keyboard:control/pathtrack:global_plan_sim:mqtt/mqtt_bridge:mqtt/mqtt_comm:mqtt_commx:multi_car:pathplan:sensor/gps:share/common:utils/help_tool
 -DCATKIN_DEVEL_PREFIX=/home/cqy/projects/Little_Car_ws/devel -DCMAKE_INSTALL_PREFIX=/home/cqy/projects/Little_Car_ws/install -G Unix Makefiles

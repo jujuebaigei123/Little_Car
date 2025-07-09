@@ -1,0 +1,34 @@
+ <launch>
+    <!-- gps -->
+    <!-- <include file="$(find gps)/launch/run.launch"/> -->
+    <!-- puresuit -->
+    <!-- <include file="$(find pathtrack)/launch/run.launch"/> -->
+    <!-- work -->
+    <!-- <include file="$(find board_ctr)/launch/run.launch"/> -->
+    <!-- plus1 -->
+    <!-- <include file="$(find data_comm)/launch/run.launch"/> -->
+    <!-- Joy -->
+    <!-- <include file="$(find teleop_twist_joy)/launch/teleop.launch"/> -->
+    <!-- pathplan -->
+    <rosparam file="$(find pathplan)cfg/config_pathplan.yaml" command="load"/>
+    <node pkg="pathplan" type="globalpathplan" name="globalpathplan" output="screen">
+	    <param name="configfile" value="$(find pathplan)/cfg/config_pathplan.yaml"/>
+        <!-- <param name="pathfilename" value="$(find pathplan)/pathdata/sim_track222.txt"/> -->
+        <!-- <param name="path_space" value="0.2"/>
+        <param name="aim_range" value="70"/> -->
+    </node>
+
+    <node pkg="pathplan" type="localpathplan" name="localpathplan" output="screen">
+        <!-- <param name="detect_area_x" value="40"/>
+        <param name="detect_area_y" value="30"/>
+        <param name="detect_area_angle" value="100"/>
+        <param name="stop_maxx" value="2"/>
+        <param name="stop_maxy" value="1"/>
+        <param name="offset_path_length" value="35"/> -->
+    </node>
+
+    <!-- <node pkg="rviz" name="rviz" type="rviz" args="-d $(find pathplan)/show.rviz"/> -->
+ </launch>
+
+
+

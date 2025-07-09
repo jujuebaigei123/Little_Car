@@ -18,17 +18,18 @@ class path_point {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
-      this.vehSpeed = null;
+      this.id = null;
       this.pointX = null;
       this.pointY = null;
       this.pointHA = null;
+      this.vehSpeed = null;
     }
     else {
-      if (initObj.hasOwnProperty('vehSpeed')) {
-        this.vehSpeed = initObj.vehSpeed
+      if (initObj.hasOwnProperty('id')) {
+        this.id = initObj.id
       }
       else {
-        this.vehSpeed = 0.0;
+        this.id = '';
       }
       if (initObj.hasOwnProperty('pointX')) {
         this.pointX = initObj.pointX
@@ -48,19 +49,27 @@ class path_point {
       else {
         this.pointHA = 0.0;
       }
+      if (initObj.hasOwnProperty('vehSpeed')) {
+        this.vehSpeed = initObj.vehSpeed
+      }
+      else {
+        this.vehSpeed = 0.0;
+      }
     }
   }
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type path_point
-    // Serialize message field [vehSpeed]
-    bufferOffset = _serializer.float32(obj.vehSpeed, buffer, bufferOffset);
+    // Serialize message field [id]
+    bufferOffset = _serializer.string(obj.id, buffer, bufferOffset);
     // Serialize message field [pointX]
     bufferOffset = _serializer.float64(obj.pointX, buffer, bufferOffset);
     // Serialize message field [pointY]
     bufferOffset = _serializer.float64(obj.pointY, buffer, bufferOffset);
     // Serialize message field [pointHA]
     bufferOffset = _serializer.float64(obj.pointHA, buffer, bufferOffset);
+    // Serialize message field [vehSpeed]
+    bufferOffset = _serializer.float32(obj.vehSpeed, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -68,19 +77,23 @@ class path_point {
     //deserializes a message object of type path_point
     let len;
     let data = new path_point(null);
-    // Deserialize message field [vehSpeed]
-    data.vehSpeed = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [id]
+    data.id = _deserializer.string(buffer, bufferOffset);
     // Deserialize message field [pointX]
     data.pointX = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [pointY]
     data.pointY = _deserializer.float64(buffer, bufferOffset);
     // Deserialize message field [pointHA]
     data.pointHA = _deserializer.float64(buffer, bufferOffset);
+    // Deserialize message field [vehSpeed]
+    data.vehSpeed = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
-    return 28;
+    let length = 0;
+    length += _getByteLength(object.id);
+    return length + 32;
   }
 
   static datatype() {
@@ -90,16 +103,17 @@ class path_point {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '6c29c28350be647e56acc4fdcf5724c5';
+    return '8408613975c254abac6a9cd9adbad530';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    float32 vehSpeed
+    string id
     float64 pointX
     float64 pointY
     float64 pointHA
+    float32 vehSpeed
     
     `;
   }
@@ -110,11 +124,11 @@ class path_point {
       msg = {};
     }
     const resolved = new path_point(null);
-    if (msg.vehSpeed !== undefined) {
-      resolved.vehSpeed = msg.vehSpeed;
+    if (msg.id !== undefined) {
+      resolved.id = msg.id;
     }
     else {
-      resolved.vehSpeed = 0.0
+      resolved.id = ''
     }
 
     if (msg.pointX !== undefined) {
@@ -136,6 +150,13 @@ class path_point {
     }
     else {
       resolved.pointHA = 0.0
+    }
+
+    if (msg.vehSpeed !== undefined) {
+      resolved.vehSpeed = msg.vehSpeed;
+    }
+    else {
+      resolved.vehSpeed = 0.0
     }
 
     return resolved;

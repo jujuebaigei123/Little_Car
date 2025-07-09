@@ -116,7 +116,7 @@
    self)
   )
 
-(setf (get mqtt_commx::task :md5sum-) "bde58ca2fd96754ea94604b71e597ab7")
+(setf (get mqtt_commx::task :md5sum-) "1a7c87868fd86cc2f9674d22354ac3c9")
 (setf (get mqtt_commx::task :datatype-) "mqtt_commx/task")
 (setf (get mqtt_commx::task :definition-)
       "time stamp         #时间戳
@@ -130,15 +130,16 @@ string task_id
 
 ================================================================================
 MSG: mqtt_commx/path_point
-float32 vehSpeed
+string id
 float64 pointX
 float64 pointY
 float64 pointHA
+float32 vehSpeed
 
 ")
 
 
 
-(provide :mqtt_commx/task "bde58ca2fd96754ea94604b71e597ab7")
+(provide :mqtt_commx/task "1a7c87868fd86cc2f9674d22354ac3c9")
 
 

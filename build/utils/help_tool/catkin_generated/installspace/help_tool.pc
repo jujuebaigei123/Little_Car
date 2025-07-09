@@ -1,0 +1,8 @@
+prefix=/home/cqy/projects/Little_Car_ws/install
+
+Name: help_tool
+Description: Description of help_tool
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lhelp_tool
+Requires: cv_bridge geometry_msgs image_transport nav_msgs roscpp rospy std_msgs tf rviz_visual_tools

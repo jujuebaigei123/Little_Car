@@ -433,7 +433,7 @@
    self)
   )
 
-(setf (get mqtt_commx::controls :md5sum-) "0c5cf398ee743496bb1cfd81aefc4c97")
+(setf (get mqtt_commx::controls :md5sum-) "fe7b7fdca90c630418f47e94ec5b0182")
 (setf (get mqtt_commx::controls :datatype-) "mqtt_commx/controls")
 (setf (get mqtt_commx::controls :definition-)
       "string msgType
@@ -485,15 +485,16 @@ int32 intersectionId
 
 ================================================================================
 MSG: mqtt_commx/path_point
-float32 vehSpeed
+string id
 float64 pointX
 float64 pointY
 float64 pointHA
+float32 vehSpeed
 
 ")
 
 
 
-(provide :mqtt_commx/controls "0c5cf398ee743496bb1cfd81aefc4c97")
+(provide :mqtt_commx/controls "fe7b7fdca90c630418f47e94ec5b0182")
 
 

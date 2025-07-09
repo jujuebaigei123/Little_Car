@@ -153,8 +153,11 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/cqy/projects/Little_Car_ws/build/mqtt/mqtt_comm/cmake_install.cmake")
   include("/home/cqy/projects/Little_Car_ws/build/control/car_ctr/cmake_install.cmake")
   include("/home/cqy/projects/Little_Car_ws/build/mqtt_commx/cmake_install.cmake")
+  include("/home/cqy/projects/Little_Car_ws/build/multi_car/cmake_install.cmake")
   include("/home/cqy/projects/Little_Car_ws/build/control/pathtrack/cmake_install.cmake")
   include("/home/cqy/projects/Little_Car_ws/build/global_plan_sim/cmake_install.cmake")
+  include("/home/cqy/projects/Little_Car_ws/build/utils/help_tool/cmake_install.cmake")
+  include("/home/cqy/projects/Little_Car_ws/build/pathplan/cmake_install.cmake")
 
 endif()
 

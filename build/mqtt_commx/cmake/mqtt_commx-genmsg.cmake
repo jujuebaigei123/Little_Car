@@ -54,7 +54,7 @@ add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg" NAME_WE)
 add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg" "mqtt_commx/iot_path_point:mqtt_commx/cmd_Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg" "mqtt_commx/cmd_Header:mqtt_commx/iot_path_point"
 )
 
 get_filename_component(_filename "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_tasks.msg" NAME_WE)
@@ -74,7 +74,7 @@ add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg" NAME_WE)
 add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg" "mqtt_commx/fault_info:mqtt_commx/fault_info_array"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg" "mqtt_commx/fault_info_array:mqtt_commx/fault_info"
 )
 
 get_filename_component(_filename "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/charge_station_notify.msg" NAME_WE)
@@ -94,12 +94,12 @@ add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg" NAME_WE)
 add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg" "mqtt_commx/Point:mqtt_commx/fault_info:mqtt_commx/cmd_Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg" "mqtt_commx/cmd_Header:mqtt_commx/Point:mqtt_commx/fault_info"
 )
 
 get_filename_component(_filename "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg" NAME_WE)
 add_custom_target(_mqtt_commx_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg" "mqtt_commx/Point:mqtt_commx/act_status:mqtt_commx/fault_info:mqtt_commx/cmd_Header"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "mqtt_commx" "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg" "mqtt_commx/cmd_Header:mqtt_commx/Point:mqtt_commx/fault_info:mqtt_commx/act_status"
 )
 
 #
@@ -153,7 +153,7 @@ _generate_msg_cpp(mqtt_commx
 _generate_msg_cpp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_cpp(mqtt_commx
@@ -177,7 +177,7 @@ _generate_msg_cpp(mqtt_commx
 _generate_msg_cpp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_cpp(mqtt_commx
@@ -201,13 +201,13 @@ _generate_msg_cpp(mqtt_commx
 _generate_msg_cpp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_cpp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/mqtt_commx
 )
 
@@ -314,7 +314,7 @@ _generate_msg_eus(mqtt_commx
 _generate_msg_eus(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_eus(mqtt_commx
@@ -338,7 +338,7 @@ _generate_msg_eus(mqtt_commx
 _generate_msg_eus(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_eus(mqtt_commx
@@ -362,13 +362,13 @@ _generate_msg_eus(mqtt_commx
 _generate_msg_eus(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_eus(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/mqtt_commx
 )
 
@@ -475,7 +475,7 @@ _generate_msg_lisp(mqtt_commx
 _generate_msg_lisp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_lisp(mqtt_commx
@@ -499,7 +499,7 @@ _generate_msg_lisp(mqtt_commx
 _generate_msg_lisp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_lisp(mqtt_commx
@@ -523,13 +523,13 @@ _generate_msg_lisp(mqtt_commx
 _generate_msg_lisp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_lisp(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/mqtt_commx
 )
 
@@ -636,7 +636,7 @@ _generate_msg_nodejs(mqtt_commx
 _generate_msg_nodejs(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_nodejs(mqtt_commx
@@ -660,7 +660,7 @@ _generate_msg_nodejs(mqtt_commx
 _generate_msg_nodejs(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_nodejs(mqtt_commx
@@ -684,13 +684,13 @@ _generate_msg_nodejs(mqtt_commx
 _generate_msg_nodejs(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_nodejs(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/mqtt_commx
 )
 
@@ -797,7 +797,7 @@ _generate_msg_py(mqtt_commx
 _generate_msg_py(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_taskpath.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_path_point.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_py(mqtt_commx
@@ -821,7 +821,7 @@ _generate_msg_py(mqtt_commx
 _generate_msg_py(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/resp_iot.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info_array.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_py(mqtt_commx
@@ -845,13 +845,13 @@ _generate_msg_py(mqtt_commx
 _generate_msg_py(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mqtt_commx
 )
 _generate_msg_py(mqtt_commx
   "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg"
   "${MSG_I_FLAGS}"
-  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg"
+  "/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/cmd_Header.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/Point.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/fault_info.msg;/home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/act_status.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/mqtt_commx
 )
 

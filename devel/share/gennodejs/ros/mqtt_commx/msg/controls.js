@@ -414,7 +414,9 @@ class controls {
     length += _getByteLength(object.agvId);
     length += _getByteLength(object.targetName);
     length += _getByteLength(object.cargoId);
-    length += 28 * object.path.length;
+    object.path.forEach((val) => {
+      length += path_point.getMessageSize(val);
+    });
     length += _getByteLength(object.addr);
     length += _getByteLength(object.ctrlType);
     return length + 176;
@@ -427,7 +429,7 @@ class controls {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '0c5cf398ee743496bb1cfd81aefc4c97';
+    return 'fe7b7fdca90c630418f47e94ec5b0182';
   }
 
   static messageDefinition() {
@@ -482,10 +484,11 @@ class controls {
     
     ================================================================================
     MSG: mqtt_commx/path_point
-    float32 vehSpeed
+    string id
     float64 pointX
     float64 pointY
     float64 pointHA
+    float32 vehSpeed
     
     `;
   }

@@ -1,0 +1,15 @@
+<launch>
+   <!-- <include file="$(find gps)/launch/run.launch"/> -->
+   <!-- 不同设备需要有不同ID,ID从1开始视为头车 -->
+   <param name="Car_ID" value="2"/>   
+   <param name="broker" value="192.168.10.101"/>
+
+   <node pkg="mqtt_commx" type="simple_pub.py" name="simple_pub" output="screen" respawn="true">
+      <param name="actor" value="follower"/>
+   </node>
+
+   <node pkg="mqtt_commx" type="simple_sub.py" name="simple_sub" output="screen" respawn="true"/>
+   
+   <!-- <node pkg="tf2_ros" type="static_transform_publisher" name="base_map" args="2 1.37 3 0 0 0 base_link map"/> -->
+  
+</launch>

@@ -9,7 +9,7 @@ import struct
 import mqtt_commx.msg
 
 class controls(genpy.Message):
-  _md5sum = "0c5cf398ee743496bb1cfd81aefc4c97"
+  _md5sum = "fe7b7fdca90c630418f47e94ec5b0182"
   _type = "mqtt_commx/controls"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """string msgType
@@ -61,10 +61,11 @@ int32 intersectionId
 
 ================================================================================
 MSG: mqtt_commx/path_point
-float32 vehSpeed
+string id
 float64 pointX
 float64 pointY
 float64 pointHA
+float32 vehSpeed
 """
   __slots__ = ['msgType','agvId','timestamp','taskId','taskType','targetName','targetX','targetY','targetHA','cargoLength','cargoWidth','cargoWeight','cargoId','wheelBase','subtaskCount','subtaskIndex','subtaskAction','pathLength','path','value','channelId','cmd','timeSec','addr','cmdId','ctrlType','stopPosX','stopPosY','stopPosHA','lightStatus','lightType','lightLeftTime','intersectionId']
   _slot_types = ['string','string','int64','int32','int32','string','float64','float64','float64','float64','float64','float64','string','float64','int32','int32','int32','int32','mqtt_commx/path_point[]','int32','int32','int32','int32','string','int32','string','float64','float64','float64','int32','int32','int32','int32']
@@ -232,8 +233,14 @@ float64 pointHA
       length = len(self.path)
       buff.write(_struct_I.pack(length))
       for val1 in self.path:
+        _x = val1.id
+        length = len(_x)
+        if python3 or type(_x) == unicode:
+          _x = _x.encode('utf-8')
+          length = len(_x)
+        buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
         _x = val1
-        buff.write(_get_struct_f3d().pack(_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA))
+        buff.write(_get_struct_3df().pack(_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed))
       _x = self
       buff.write(_get_struct_4i().pack(_x.value, _x.channelId, _x.cmd, _x.timeSec))
       _x = self.addr
@@ -320,10 +327,19 @@ float64 pointHA
       self.path = []
       for i in range(0, length):
         val1 = mqtt_commx.msg.path_point()
+        start = end
+        end += 4
+        (length,) = _struct_I.unpack(str[start:end])
+        start = end
+        end += length
+        if python3:
+          val1.id = str[start:end].decode('utf-8', 'rosmsg')
+        else:
+          val1.id = str[start:end]
         _x = val1
         start = end
         end += 28
-        (_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA,) = _get_struct_f3d().unpack(str[start:end])
+        (_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed,) = _get_struct_3df().unpack(str[start:end])
         self.path.append(val1)
       _x = self
       start = end
@@ -399,8 +415,14 @@ float64 pointHA
       length = len(self.path)
       buff.write(_struct_I.pack(length))
       for val1 in self.path:
+        _x = val1.id
+        length = len(_x)
+        if python3 or type(_x) == unicode:
+          _x = _x.encode('utf-8')
+          length = len(_x)
+        buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
         _x = val1
-        buff.write(_get_struct_f3d().pack(_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA))
+        buff.write(_get_struct_3df().pack(_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed))
       _x = self
       buff.write(_get_struct_4i().pack(_x.value, _x.channelId, _x.cmd, _x.timeSec))
       _x = self.addr
@@ -488,10 +510,19 @@ float64 pointHA
       self.path = []
       for i in range(0, length):
         val1 = mqtt_commx.msg.path_point()
+        start = end
+        end += 4
+        (length,) = _struct_I.unpack(str[start:end])
+        start = end
+        end += length
+        if python3:
+          val1.id = str[start:end].decode('utf-8', 'rosmsg')
+        else:
+          val1.id = str[start:end]
         _x = val1
         start = end
         end += 28
-        (_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA,) = _get_struct_f3d().unpack(str[start:end])
+        (_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed,) = _get_struct_3df().unpack(str[start:end])
         self.path.append(val1)
       _x = self
       start = end
@@ -536,6 +567,12 @@ def _get_struct_3d4i():
     if _struct_3d4i is None:
         _struct_3d4i = struct.Struct("<3d4i")
     return _struct_3d4i
+_struct_3df = None
+def _get_struct_3df():
+    global _struct_3df
+    if _struct_3df is None:
+        _struct_3df = struct.Struct("<3df")
+    return _struct_3df
 _struct_4i = None
 def _get_struct_4i():
     global _struct_4i
@@ -554,12 +591,6 @@ def _get_struct_d4i():
     if _struct_d4i is None:
         _struct_d4i = struct.Struct("<d4i")
     return _struct_d4i
-_struct_f3d = None
-def _get_struct_f3d():
-    global _struct_f3d
-    if _struct_f3d is None:
-        _struct_f3d = struct.Struct("<f3d")
-    return _struct_f3d
 _struct_i = None
 def _get_struct_i():
     global _struct_i

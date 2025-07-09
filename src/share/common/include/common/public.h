@@ -72,7 +72,11 @@ public:
     void Clear(float t = 0);
     double GetValue(void);
 };
-
+struct IdDis
+{
+    int id;
+    float dis;
+};
 
 class TDataFilter
 {

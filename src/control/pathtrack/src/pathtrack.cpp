@@ -48,12 +48,12 @@ public:
         nh = new ros::NodeHandle();
 
         aimpoint_pub = nh_local->advertise<geometry_msgs::PointStamped>("aimpoint", 10); // 发布预瞄点
-        carctr_pub = nh_local->advertise<car_ctr::car_ctr>("/car_cmd", 10); // 发布控制信息
+        carctr_pub = nh_local->advertise<car_ctr::car_ctr>("car_cmd", 10); // 发布控制信息
 
         trackangleerr_pub = nh_local->advertise<std_msgs::Float32>("track_angle_err", 10); 
         movedir_pub = nh_local->advertise<std_msgs::String>("move_dir", 10);
 
-        localpath_sub = nh->subscribe<nav_msgs::Path>("/local_path_plan/localpath", 10, &TPathTrack::LocalPathCallback, this);
+        localpath_sub = nh->subscribe<nav_msgs::Path>("/localpathplan/localpath", 10, &TPathTrack::LocalPathCallback, this);
         carstate_sub = nh->subscribe<car_ctr::car_state>("/car_state", 10, &TPathTrack::CarStateCallback, this);
         speedlimit_sub = nh->subscribe<std_msgs::Float32>("/speed_limit", 10, &TPathTrack::SpeedLimitCallback, this);
         selfturnctr_sub = nh->subscribe<std_msgs::Int32>("/selfturnctr/self_turn_ctr", 10, &TPathTrack::SelfTurnCtrCallback, this);

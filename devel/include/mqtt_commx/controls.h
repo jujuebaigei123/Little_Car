@@ -315,12 +315,12 @@ struct MD5Sum< ::mqtt_commx::controls_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "0c5cf398ee743496bb1cfd81aefc4c97";
+    return "fe7b7fdca90c630418f47e94ec5b0182";
   }
 
   static const char* value(const ::mqtt_commx::controls_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x0c5cf398ee743496ULL;
-  static const uint64_t static_value2 = 0xbb1cfd81aefc4c97ULL;
+  static const uint64_t static_value1 = 0xfe7b7fdca90c6304ULL;
+  static const uint64_t static_value2 = 0x18f47e94ec5b0182ULL;
 };
 
 template<class ContainerAllocator>
@@ -388,10 +388,11 @@ struct Definition< ::mqtt_commx::controls_<ContainerAllocator> >
 "\n"
 "================================================================================\n"
 "MSG: mqtt_commx/path_point\n"
-"float32 vehSpeed\n"
+"string id\n"
 "float64 pointX\n"
 "float64 pointY\n"
 "float64 pointHA\n"
+"float32 vehSpeed\n"
 ;
   }
 

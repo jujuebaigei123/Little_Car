@@ -8,16 +8,17 @@ import struct
 
 
 class path_point(genpy.Message):
-  _md5sum = "6c29c28350be647e56acc4fdcf5724c5"
+  _md5sum = "8408613975c254abac6a9cd9adbad530"
   _type = "mqtt_commx/path_point"
   _has_header = False  # flag to mark the presence of a Header object
-  _full_text = """float32 vehSpeed
+  _full_text = """string id
 float64 pointX
 float64 pointY
 float64 pointHA
+float32 vehSpeed
 """
-  __slots__ = ['vehSpeed','pointX','pointY','pointHA']
-  _slot_types = ['float32','float64','float64','float64']
+  __slots__ = ['id','pointX','pointY','pointHA','vehSpeed']
+  _slot_types = ['string','float64','float64','float64','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -27,7 +28,7 @@ float64 pointHA
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       vehSpeed,pointX,pointY,pointHA
+       id,pointX,pointY,pointHA,vehSpeed
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -36,19 +37,22 @@ float64 pointHA
     if args or kwds:
       super(path_point, self).__init__(*args, **kwds)
       # message fields cannot be None, assign default values for those that are
-      if self.vehSpeed is None:
-        self.vehSpeed = 0.
+      if self.id is None:
+        self.id = ''
       if self.pointX is None:
         self.pointX = 0.
       if self.pointY is None:
         self.pointY = 0.
       if self.pointHA is None:
         self.pointHA = 0.
+      if self.vehSpeed is None:
+        self.vehSpeed = 0.
     else:
-      self.vehSpeed = 0.
+      self.id = ''
       self.pointX = 0.
       self.pointY = 0.
       self.pointHA = 0.
+      self.vehSpeed = 0.
 
   def _get_types(self):
     """
@@ -62,8 +66,14 @@ float64 pointHA
     :param buff: buffer, ``StringIO``
     """
     try:
+      _x = self.id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_f3d().pack(_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA))
+      buff.write(_get_struct_3df().pack(_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -76,10 +86,19 @@ float64 pointHA
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.id = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.id = str[start:end]
       _x = self
       start = end
       end += 28
-      (_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA,) = _get_struct_f3d().unpack(str[start:end])
+      (_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed,) = _get_struct_3df().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -92,8 +111,14 @@ float64 pointHA
     :param numpy: numpy python module
     """
     try:
+      _x = self.id
+      length = len(_x)
+      if python3 or type(_x) == unicode:
+        _x = _x.encode('utf-8')
+        length = len(_x)
+      buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
       _x = self
-      buff.write(_get_struct_f3d().pack(_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA))
+      buff.write(_get_struct_3df().pack(_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -107,10 +132,19 @@ float64 pointHA
       codecs.lookup_error("rosmsg").msg_type = self._type
     try:
       end = 0
+      start = end
+      end += 4
+      (length,) = _struct_I.unpack(str[start:end])
+      start = end
+      end += length
+      if python3:
+        self.id = str[start:end].decode('utf-8', 'rosmsg')
+      else:
+        self.id = str[start:end]
       _x = self
       start = end
       end += 28
-      (_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA,) = _get_struct_f3d().unpack(str[start:end])
+      (_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed,) = _get_struct_3df().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e)  # most likely buffer underfill
@@ -119,9 +153,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_f3d = None
-def _get_struct_f3d():
-    global _struct_f3d
-    if _struct_f3d is None:
-        _struct_f3d = struct.Struct("<f3d")
-    return _struct_f3d
+_struct_3df = None
+def _get_struct_3df():
+    global _struct_3df
+    if _struct_3df is None:
+        _struct_3df = struct.Struct("<3df")
+    return _struct_3df

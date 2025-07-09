@@ -15,17 +15,19 @@ actor = None
 
 actor=rospy.get_param('/simple_pub/actor',None)
 print(actor)
-msg_dict={"vel": 0, 
-          "remainpath": None,
-          "passedpath": 0,
-          "actor":actor,
-          "path_point":{
-                    "x":None,
-                    "y":None,
-                    "heading":None,
-                    "vel":None
-        }
+msg_dict={
+    "id":None,
+    "vel": 0, 
+    "remainpath": None,
+    "passedpath": 0,
+    "actor":actor,
+    "path_point":{
+        "x":None,
+        "y":None,
+        "heading":None,
+        "vel":None
     }
+}
 
 def gps_callback(msg:MyGPS_msg):
     msg_dict["vel"]=msg.Vel
@@ -40,18 +42,18 @@ rospy.init_node('mqtt_to_ros_publisher')
 rospy.Subscriber('/gps_base/GPS_Base', MyGPS_msg, gps_callback)
 rospy.Subscriber('/local_path_plan/remainpath', Float64, remainpath_callback)
 rospy.Subscriber('/local_path_plan/passedpath', Float64, passedpath_callback)
-Car_ID=rospy.get_param('/Car_ID',"Car000")
+Car_ID=rospy.get_param('/Car_ID',1)
 
 # MQTT连接参数12
 mqtt_broker = rospy.get_param('/broker',"192.168.2.115")
 mqtt_port = 1883
-mqtt_topic = "wsk/test/"+Car_ID
+mqtt_topic = "wsk/test/"+str(Car_ID)
 
 def on_connect(client, userdata, flags, rc):
     if rc == 0:
-        print(Car_ID+" Connected to MQTT Broker!\n")
+        print("car Connected to MQTT Broker!\n")
     else:
-        print(Car_ID+" Failed to connect, return code %d\n", rc)
+        print("car Failed to connect, return code %d\n", rc)
 
 client = mqtt.Client()
 client.on_connect = on_connect

@@ -172,16 +172,16 @@
   "mqtt_commx/task")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<task>)))
   "Returns md5sum for a message object of type '<task>"
-  "bde58ca2fd96754ea94604b71e597ab7")
+  "1a7c87868fd86cc2f9674d22354ac3c9")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'task)))
   "Returns md5sum for a message object of type 'task"
-  "bde58ca2fd96754ea94604b71e597ab7")
+  "1a7c87868fd86cc2f9674d22354ac3c9")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<task>)))
   "Returns full string definition for message of type '<task>"
-  (cl:format cl:nil "time stamp         #时间戳~%string cmd         #任务~%string subcmd      #交通信号灯、控制状态~%path_point[] path  #路径~%bool final_path~%string task_id~%~%~%~%================================================================================~%MSG: mqtt_commx/path_point~%float32 vehSpeed~%float64 pointX~%float64 pointY~%float64 pointHA~%~%~%"))
+  (cl:format cl:nil "time stamp         #时间戳~%string cmd         #任务~%string subcmd      #交通信号灯、控制状态~%path_point[] path  #路径~%bool final_path~%string task_id~%~%~%~%================================================================================~%MSG: mqtt_commx/path_point~%string id~%float64 pointX~%float64 pointY~%float64 pointHA~%float32 vehSpeed~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'task)))
   "Returns full string definition for message of type 'task"
-  (cl:format cl:nil "time stamp         #时间戳~%string cmd         #任务~%string subcmd      #交通信号灯、控制状态~%path_point[] path  #路径~%bool final_path~%string task_id~%~%~%~%================================================================================~%MSG: mqtt_commx/path_point~%float32 vehSpeed~%float64 pointX~%float64 pointY~%float64 pointHA~%~%~%"))
+  (cl:format cl:nil "time stamp         #时间戳~%string cmd         #任务~%string subcmd      #交通信号灯、控制状态~%path_point[] path  #路径~%bool final_path~%string task_id~%~%~%~%================================================================================~%MSG: mqtt_commx/path_point~%string id~%float64 pointX~%float64 pointY~%float64 pointHA~%float32 vehSpeed~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <task>))
   (cl:+ 0
      8

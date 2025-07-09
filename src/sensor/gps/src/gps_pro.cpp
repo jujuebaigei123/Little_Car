@@ -73,9 +73,10 @@ TGPS_Pro::TGPS_Pro()
 void TGPS_Pro::PubPosition(geometry_msgs::PoseStamped pose, int quality)
 {
     geometry_msgs::PoseStamped pose_stamped;
+
     pose_stamped.header.stamp = ros::Time::now();
-    pose_stamped.header.frame_id = "base_link"; 
-    pose_stamped.pose.orientation.w = 1;
+    pose_stamped.header.frame_id = "map"; 
+    pose_stamped.pose = pose.pose;
     // pose_stamped.pose.position.z = msg->Vel; //速度信息
     marker_pub.publish(displayCarPosition(pose_stamped, quality));
 
@@ -86,7 +87,7 @@ void TGPS_Pro::PubPosition(geometry_msgs::PoseStamped pose, int quality)
     transform.setOrigin(tf::Vector3(pose.pose.position.x, pose.pose.position.y, 0)); // base_link在map中的位置
     tf::quaternionMsgToTF(quat, quaternion);
     transform.setRotation(quaternion);  // base_link在map中的旋转四元数
-    br1.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", pose.header.frame_id)); 
+    br1.sendTransform(tf::StampedTransform(transform, ros::Time::now(), "map", "base_link")); 
 
     if (saveflag && PathSaveBuf.size() < 100000)
     {

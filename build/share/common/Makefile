@@ -423,6 +423,21 @@ geometry_msgs_generate_messages_nodejs/fast:
 .PHONY : geometry_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
+share/common/CMakeFiles/kml_test.dir/rule:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f CMakeFiles/Makefile2 share/common/CMakeFiles/kml_test.dir/rule
+.PHONY : share/common/CMakeFiles/kml_test.dir/rule
+
+# Convenience name for target.
+kml_test: share/common/CMakeFiles/kml_test.dir/rule
+
+.PHONY : kml_test
+
+# fast build rule for target.
+kml_test/fast:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f share/common/CMakeFiles/kml_test.dir/build.make share/common/CMakeFiles/kml_test.dir/build
+.PHONY : kml_test/fast
+
+# Convenience name for target.
 share/common/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule:
 	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f CMakeFiles/Makefile2 share/common/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
 .PHONY : share/common/CMakeFiles/actionlib_msgs_generate_messages_eus.dir/rule
@@ -899,6 +914,33 @@ src/can.cpp.s:
 	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f share/common/CMakeFiles/can.dir/build.make share/common/CMakeFiles/can.dir/src/can.cpp.s
 .PHONY : src/can.cpp.s
 
+src/kml_test.o: src/kml_test.cpp.o
+
+.PHONY : src/kml_test.o
+
+# target to build an object file
+src/kml_test.cpp.o:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f share/common/CMakeFiles/kml_test.dir/build.make share/common/CMakeFiles/kml_test.dir/src/kml_test.cpp.o
+.PHONY : src/kml_test.cpp.o
+
+src/kml_test.i: src/kml_test.cpp.i
+
+.PHONY : src/kml_test.i
+
+# target to preprocess a source file
+src/kml_test.cpp.i:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f share/common/CMakeFiles/kml_test.dir/build.make share/common/CMakeFiles/kml_test.dir/src/kml_test.cpp.i
+.PHONY : src/kml_test.cpp.i
+
+src/kml_test.s: src/kml_test.cpp.s
+
+.PHONY : src/kml_test.s
+
+# target to generate assembly for a file
+src/kml_test.cpp.s:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f share/common/CMakeFiles/kml_test.dir/build.make share/common/CMakeFiles/kml_test.dir/src/kml_test.cpp.s
+.PHONY : src/kml_test.cpp.s
+
 src/public.o: src/public.cpp.o
 
 .PHONY : src/public.o
@@ -953,6 +995,7 @@ help:
 	@echo "... tf2_msgs_generate_messages_py"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
+	@echo "... kml_test"
 	@echo "... actionlib_msgs_generate_messages_eus"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... install/local"
@@ -989,6 +1032,9 @@ help:
 	@echo "... src/can.o"
 	@echo "... src/can.i"
 	@echo "... src/can.s"
+	@echo "... src/kml_test.o"
+	@echo "... src/kml_test.i"
+	@echo "... src/kml_test.s"
 	@echo "... src/public.o"
 	@echo "... src/public.i"
 	@echo "... src/public.s"

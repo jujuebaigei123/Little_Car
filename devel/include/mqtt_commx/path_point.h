@@ -24,23 +24,25 @@ struct path_point_
   typedef path_point_<ContainerAllocator> Type;
 
   path_point_()
-    : vehSpeed(0.0)
+    : id()
     , pointX(0.0)
     , pointY(0.0)
-    , pointHA(0.0)  {
+    , pointHA(0.0)
+    , vehSpeed(0.0)  {
     }
   path_point_(const ContainerAllocator& _alloc)
-    : vehSpeed(0.0)
+    : id(_alloc)
     , pointX(0.0)
     , pointY(0.0)
-    , pointHA(0.0)  {
+    , pointHA(0.0)
+    , vehSpeed(0.0)  {
   (void)_alloc;
     }
 
 
 
-   typedef float _vehSpeed_type;
-  _vehSpeed_type vehSpeed;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _id_type;
+  _id_type id;
 
    typedef double _pointX_type;
   _pointX_type pointX;
@@ -50,6 +52,9 @@ struct path_point_
 
    typedef double _pointHA_type;
   _pointHA_type pointHA;
+
+   typedef float _vehSpeed_type;
+  _vehSpeed_type vehSpeed;
 
 
 
@@ -80,10 +85,11 @@ return s;
 template<typename ContainerAllocator1, typename ContainerAllocator2>
 bool operator==(const ::mqtt_commx::path_point_<ContainerAllocator1> & lhs, const ::mqtt_commx::path_point_<ContainerAllocator2> & rhs)
 {
-  return lhs.vehSpeed == rhs.vehSpeed &&
+  return lhs.id == rhs.id &&
     lhs.pointX == rhs.pointX &&
     lhs.pointY == rhs.pointY &&
-    lhs.pointHA == rhs.pointHA;
+    lhs.pointHA == rhs.pointHA &&
+    lhs.vehSpeed == rhs.vehSpeed;
 }
 
 template<typename ContainerAllocator1, typename ContainerAllocator2>
@@ -116,12 +122,12 @@ struct IsMessage< ::mqtt_commx::path_point_<ContainerAllocator> const>
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::mqtt_commx::path_point_<ContainerAllocator> >
-  : TrueType
+  : FalseType
   { };
 
 template <class ContainerAllocator>
 struct IsFixedSize< ::mqtt_commx::path_point_<ContainerAllocator> const>
-  : TrueType
+  : FalseType
   { };
 
 template <class ContainerAllocator>
@@ -140,12 +146,12 @@ struct MD5Sum< ::mqtt_commx::path_point_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "6c29c28350be647e56acc4fdcf5724c5";
+    return "8408613975c254abac6a9cd9adbad530";
   }
 
   static const char* value(const ::mqtt_commx::path_point_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x6c29c28350be647eULL;
-  static const uint64_t static_value2 = 0x56acc4fdcf5724c5ULL;
+  static const uint64_t static_value1 = 0x8408613975c254abULL;
+  static const uint64_t static_value2 = 0xac6a9cd9adbad530ULL;
 };
 
 template<class ContainerAllocator>
@@ -164,10 +170,11 @@ struct Definition< ::mqtt_commx::path_point_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "float32 vehSpeed\n"
+    return "string id\n"
 "float64 pointX\n"
 "float64 pointY\n"
 "float64 pointHA\n"
+"float32 vehSpeed\n"
 ;
   }
 
@@ -186,10 +193,11 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
-      stream.next(m.vehSpeed);
+      stream.next(m.id);
       stream.next(m.pointX);
       stream.next(m.pointY);
       stream.next(m.pointHA);
+      stream.next(m.vehSpeed);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -210,8 +218,8 @@ struct Printer< ::mqtt_commx::path_point_<ContainerAllocator> >
   {
     if (false || !indent.empty())
       s << std::endl;
-    s << indent << "vehSpeed: ";
-    Printer<float>::stream(s, indent + "  ", v.vehSpeed);
+    s << indent << "id: ";
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.id);
     if (true || !indent.empty())
       s << std::endl;
     s << indent << "pointX: ";
@@ -224,6 +232,10 @@ struct Printer< ::mqtt_commx::path_point_<ContainerAllocator> >
       s << std::endl;
     s << indent << "pointHA: ";
     Printer<double>::stream(s, indent + "  ", v.pointHA);
+    if (true || !indent.empty())
+      s << std::endl;
+    s << indent << "vehSpeed: ";
+    Printer<float>::stream(s, indent + "  ", v.vehSpeed);
   }
 };
 

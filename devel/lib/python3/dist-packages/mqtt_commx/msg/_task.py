@@ -10,7 +10,7 @@ import genpy
 import mqtt_commx.msg
 
 class task(genpy.Message):
-  _md5sum = "bde58ca2fd96754ea94604b71e597ab7"
+  _md5sum = "1a7c87868fd86cc2f9674d22354ac3c9"
   _type = "mqtt_commx/task"
   _has_header = False  # flag to mark the presence of a Header object
   _full_text = """time stamp         #时间戳
@@ -24,10 +24,11 @@ string task_id
 
 ================================================================================
 MSG: mqtt_commx/path_point
-float32 vehSpeed
+string id
 float64 pointX
 float64 pointY
 float64 pointHA
+float32 vehSpeed
 """
   __slots__ = ['stamp','cmd','subcmd','path','final_path','task_id']
   _slot_types = ['time','string','string','mqtt_commx/path_point[]','bool','string']
@@ -98,8 +99,14 @@ float64 pointHA
       length = len(self.path)
       buff.write(_struct_I.pack(length))
       for val1 in self.path:
+        _x = val1.id
+        length = len(_x)
+        if python3 or type(_x) == unicode:
+          _x = _x.encode('utf-8')
+          length = len(_x)
+        buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
         _x = val1
-        buff.write(_get_struct_f3d().pack(_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA))
+        buff.write(_get_struct_3df().pack(_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed))
       _x = self.final_path
       buff.write(_get_struct_B().pack(_x))
       _x = self.task_id
@@ -152,10 +159,19 @@ float64 pointHA
       self.path = []
       for i in range(0, length):
         val1 = mqtt_commx.msg.path_point()
+        start = end
+        end += 4
+        (length,) = _struct_I.unpack(str[start:end])
+        start = end
+        end += length
+        if python3:
+          val1.id = str[start:end].decode('utf-8', 'rosmsg')
+        else:
+          val1.id = str[start:end]
         _x = val1
         start = end
         end += 28
-        (_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA,) = _get_struct_f3d().unpack(str[start:end])
+        (_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed,) = _get_struct_3df().unpack(str[start:end])
         self.path.append(val1)
       start = end
       end += 1
@@ -200,8 +216,14 @@ float64 pointHA
       length = len(self.path)
       buff.write(_struct_I.pack(length))
       for val1 in self.path:
+        _x = val1.id
+        length = len(_x)
+        if python3 or type(_x) == unicode:
+          _x = _x.encode('utf-8')
+          length = len(_x)
+        buff.write(struct.Struct('<I%ss'%length).pack(length, _x))
         _x = val1
-        buff.write(_get_struct_f3d().pack(_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA))
+        buff.write(_get_struct_3df().pack(_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed))
       _x = self.final_path
       buff.write(_get_struct_B().pack(_x))
       _x = self.task_id
@@ -255,10 +277,19 @@ float64 pointHA
       self.path = []
       for i in range(0, length):
         val1 = mqtt_commx.msg.path_point()
+        start = end
+        end += 4
+        (length,) = _struct_I.unpack(str[start:end])
+        start = end
+        end += length
+        if python3:
+          val1.id = str[start:end].decode('utf-8', 'rosmsg')
+        else:
+          val1.id = str[start:end]
         _x = val1
         start = end
         end += 28
-        (_x.vehSpeed, _x.pointX, _x.pointY, _x.pointHA,) = _get_struct_f3d().unpack(str[start:end])
+        (_x.pointX, _x.pointY, _x.pointHA, _x.vehSpeed,) = _get_struct_3df().unpack(str[start:end])
         self.path.append(val1)
       start = end
       end += 1
@@ -288,15 +319,15 @@ def _get_struct_2I():
     if _struct_2I is None:
         _struct_2I = struct.Struct("<2I")
     return _struct_2I
+_struct_3df = None
+def _get_struct_3df():
+    global _struct_3df
+    if _struct_3df is None:
+        _struct_3df = struct.Struct("<3df")
+    return _struct_3df
 _struct_B = None
 def _get_struct_B():
     global _struct_B
     if _struct_B is None:
         _struct_B = struct.Struct("<B")
     return _struct_B
-_struct_f3d = None
-def _get_struct_f3d():
-    global _struct_f3d
-    if _struct_f3d is None:
-        _struct_f3d = struct.Struct("<f3d")
-    return _struct_f3d

@@ -1,0 +1,22 @@
+ <launch>
+    <!-- gps -->
+    <include file="$(find gps)/launch/run_gps.launch"/>
+    <!-- plus1 -->
+    <include file="$(find data_comm)/launch/run.launch"/>
+    <!-- puresuit -->
+    <include file="$(find pathtrack)/launch/run.launch"/>
+    <!-- pathplan -->
+    <node pkg="pathplan" type="globalpathplan" name="globalpathplan" output="screen">
+        <!-- <param name="pathfilename" value="/home/user/vsc1.5_ws/src/pathplan/pathdata/abc.txt"/> -->
+        <!-- <param name="shotpointfilename" value="/home/user/vsc1.5_ws/src/vsc_control/shotpointdata/abcd.txt"/> -->
+        <param name="path_space" value="1"/>
+    </node>
+    <node pkg="pathplan" type="localpathplan" name="localpathplan" output="screen">
+        <param name="offset_path_length" value="12"/>
+    </node>
+    <node pkg="pathplan" type="Interpolation_core" name="Interpolation_core" output="screen"/>
+    <node pkg="rviz" name="rviz" type="rviz" args="-d $(find pathplan)/show.rviz"/>
+ </launch>
+
+
+

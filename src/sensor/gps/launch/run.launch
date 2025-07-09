@@ -13,7 +13,7 @@
 
         <!--串口和以太网只能选择一个(串口)-->
         <param name="mode" value="SER"/>
-        <param name="devname" value="/dev/ttyS0"/>
+        <param name="devname" value="/dev/ttyS2"/>
         <param name="baud" value="115200"/>
 
         <!--串口和以太网只能选择一个(以太网)1234-->

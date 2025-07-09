@@ -1,0 +1,10 @@
+globalpathplan:
+  path_space: 0.2
+  aim_range: 50
+localpathplan:
+  stop_maxx: 4
+  stop_maxy: 2
+  work_range_x: 8
+  work_range_y: 2
+  offset_path_length: 35
+ 

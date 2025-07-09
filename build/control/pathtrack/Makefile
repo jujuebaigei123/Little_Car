@@ -258,6 +258,21 @@ _pathtrack_generate_messages_check_deps_track_state/fast:
 .PHONY : _pathtrack_generate_messages_check_deps_track_state/fast
 
 # Convenience name for target.
+control/pathtrack/CMakeFiles/carctr_decision.dir/rule:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f CMakeFiles/Makefile2 control/pathtrack/CMakeFiles/carctr_decision.dir/rule
+.PHONY : control/pathtrack/CMakeFiles/carctr_decision.dir/rule
+
+# Convenience name for target.
+carctr_decision: control/pathtrack/CMakeFiles/carctr_decision.dir/rule
+
+.PHONY : carctr_decision
+
+# fast build rule for target.
+carctr_decision/fast:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f control/pathtrack/CMakeFiles/carctr_decision.dir/build.make control/pathtrack/CMakeFiles/carctr_decision.dir/build
+.PHONY : carctr_decision/fast
+
+# Convenience name for target.
 control/pathtrack/CMakeFiles/pathtrack_gennodejs.dir/rule:
 	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f CMakeFiles/Makefile2 control/pathtrack/CMakeFiles/pathtrack_gennodejs.dir/rule
 .PHONY : control/pathtrack/CMakeFiles/pathtrack_gennodejs.dir/rule
@@ -392,6 +407,33 @@ pathtrack_generate_messages_py/fast:
 	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f control/pathtrack/CMakeFiles/pathtrack_generate_messages_py.dir/build.make control/pathtrack/CMakeFiles/pathtrack_generate_messages_py.dir/build
 .PHONY : pathtrack_generate_messages_py/fast
 
+src/carctr_decision.o: src/carctr_decision.cpp.o
+
+.PHONY : src/carctr_decision.o
+
+# target to build an object file
+src/carctr_decision.cpp.o:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f control/pathtrack/CMakeFiles/carctr_decision.dir/build.make control/pathtrack/CMakeFiles/carctr_decision.dir/src/carctr_decision.cpp.o
+.PHONY : src/carctr_decision.cpp.o
+
+src/carctr_decision.i: src/carctr_decision.cpp.i
+
+.PHONY : src/carctr_decision.i
+
+# target to preprocess a source file
+src/carctr_decision.cpp.i:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f control/pathtrack/CMakeFiles/carctr_decision.dir/build.make control/pathtrack/CMakeFiles/carctr_decision.dir/src/carctr_decision.cpp.i
+.PHONY : src/carctr_decision.cpp.i
+
+src/carctr_decision.s: src/carctr_decision.cpp.s
+
+.PHONY : src/carctr_decision.s
+
+# target to generate assembly for a file
+src/carctr_decision.cpp.s:
+	cd /home/cqy/projects/Little_Car_ws/build && $(MAKE) -f control/pathtrack/CMakeFiles/carctr_decision.dir/build.make control/pathtrack/CMakeFiles/carctr_decision.dir/src/carctr_decision.cpp.s
+.PHONY : src/carctr_decision.cpp.s
+
 src/pathtrack.o: src/pathtrack.cpp.o
 
 .PHONY : src/pathtrack.o
@@ -491,6 +533,7 @@ help:
 	@echo "... pathtrack_generate_messages_nodejs"
 	@echo "... pathtrack_genpy"
 	@echo "... _pathtrack_generate_messages_check_deps_track_state"
+	@echo "... carctr_decision"
 	@echo "... pathtrack_gennodejs"
 	@echo "... pathtrack_generate_messages_cpp"
 	@echo "... pathtrack"
@@ -501,6 +544,9 @@ help:
 	@echo "... selfturnctr"
 	@echo "... pathtrack_generate_messages_lisp"
 	@echo "... pathtrack_generate_messages_py"
+	@echo "... src/carctr_decision.o"
+	@echo "... src/carctr_decision.i"
+	@echo "... src/carctr_decision.s"
 	@echo "... src/pathtrack.o"
 	@echo "... src/pathtrack.i"
 	@echo "... src/pathtrack.s"

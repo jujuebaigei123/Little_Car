@@ -1,0 +1,7 @@
+<launch> 
+    <node pkg="multi_car" name="multi_car" type="multi_car" output="screen">
+        <param name="vp_adj_dis_max" value="25"/>
+        <param name="carFollowEnable" value="true"/> 
+        <param name="target_car_id" value="1"/>      
+    </node>
+</launch> 

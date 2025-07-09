@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/cqy/projects/Little_Car_ws/build
 include mqtt_commx/CMakeFiles/_mqtt_commx_generate_messages_check_deps_iot_act_status.dir/progress.make
 
 mqtt_commx/CMakeFiles/_mqtt_commx_generate_messages_check_deps_iot_act_status:
-	cd /home/cqy/projects/Little_Car_ws/build/mqtt_commx && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mqtt_commx /home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg mqtt_commx/Point:mqtt_commx/act_status:mqtt_commx/fault_info:mqtt_commx/cmd_Header
+	cd /home/cqy/projects/Little_Car_ws/build/mqtt_commx && ../catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py mqtt_commx /home/cqy/projects/Little_Car_ws/src/mqtt_commx/msg/iot_act_status.msg mqtt_commx/cmd_Header:mqtt_commx/Point:mqtt_commx/fault_info:mqtt_commx/act_status
 
 _mqtt_commx_generate_messages_check_deps_iot_act_status: mqtt_commx/CMakeFiles/_mqtt_commx_generate_messages_check_deps_iot_act_status
 _mqtt_commx_generate_messages_check_deps_iot_act_status: mqtt_commx/CMakeFiles/_mqtt_commx_generate_messages_check_deps_iot_act_status.dir/build.make

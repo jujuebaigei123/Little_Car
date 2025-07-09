@@ -115,7 +115,9 @@ class task {
     let length = 0;
     length += _getByteLength(object.cmd);
     length += _getByteLength(object.subcmd);
-    length += 28 * object.path.length;
+    object.path.forEach((val) => {
+      length += path_point.getMessageSize(val);
+    });
     length += _getByteLength(object.task_id);
     return length + 25;
   }
@@ -127,7 +129,7 @@ class task {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return 'bde58ca2fd96754ea94604b71e597ab7';
+    return '1a7c87868fd86cc2f9674d22354ac3c9';
   }
 
   static messageDefinition() {
@@ -144,10 +146,11 @@ class task {
     
     ================================================================================
     MSG: mqtt_commx/path_point
-    float32 vehSpeed
+    string id
     float64 pointX
     float64 pointY
     float64 pointHA
+    float32 vehSpeed
     
     `;
   }
